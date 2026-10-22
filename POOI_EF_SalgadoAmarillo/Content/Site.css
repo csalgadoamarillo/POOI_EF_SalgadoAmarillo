@@ -1,0 +1,15 @@
+﻿body { font-family: Arial, sans-serif; margin: 30px; color: #222; }
+main { max-width: 1100px; margin: auto; }
+table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+th { background: #eee; }
+a { color: #175ca4; }
+button { padding: 7px 12px; cursor: pointer; }
+.campo { margin-bottom: 15px; }
+.campo label { display: block; margin-bottom: 5px; }
+.campo input, .campo select { padding: 7px; width: 320px; max-width: 90%; }
+.field-validation-error { display: block; color: #b00020; margin-top: 4px; }
+.en-linea { display: inline-block; margin-left: 8px; }
+#mensaje { color: #166534; }
+dt { font-weight: bold; margin-top: 12px; }
+dd { margin: 5px 0; }

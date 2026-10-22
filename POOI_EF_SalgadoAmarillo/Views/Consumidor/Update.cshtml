@@ -1,0 +1,43 @@
+﻿@model POOI_EF_SalgadoAmarillo.Models.Consumidor
+@{
+    ViewBag.Title = "Actualizar consumidor";
+}
+
+<h2>Actualizar consumidor</h2>
+@if (ViewBag.Mensaje != null)
+{
+    <p>@ViewBag.Mensaje</p>
+}
+
+@using (Html.BeginForm("Update", "Consumidor", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="campo">
+        @Html.LabelFor(m => m.dnicont)
+        @Html.TextBoxFor(m => m.dnicont, new { @readonly = "readonly" })
+        @Html.ValidationMessageFor(m => m.dnicont)
+    </div>
+    <div class="campo">
+        @Html.LabelFor(m => m.nomcont)
+        @Html.TextBoxFor(m => m.nomcont, new { maxlength = "40", required = "required" })
+        @Html.ValidationMessageFor(m => m.nomcont)
+    </div>
+    <div class="campo">
+        @Html.LabelFor(m => m.apecont)
+        @Html.TextBoxFor(m => m.apecont, new { maxlength = "40", required = "required" })
+        @Html.ValidationMessageFor(m => m.apecont)
+    </div>
+    <div class="campo">
+        @Html.LabelFor(m => m.emailcont)
+        @Html.TextBoxFor(m => m.emailcont, new { type = "email", maxlength = "250" })
+        @Html.ValidationMessageFor(m => m.emailcont)
+    </div>
+
+    <div class="campo">
+        @Html.LabelFor(m => m.idpais)
+        @Html.DropDownListFor(m => m.idpais, (IEnumerable<SelectListItem>)ViewBag.Paises, "Seleccione un país")
+        @Html.ValidationMessageFor(m => m.idpais)
+    </div>
+    <button type="submit">Actualizar</button>
+}
+<p>@Html.ActionLink("Volver al listado", "Index")</p>

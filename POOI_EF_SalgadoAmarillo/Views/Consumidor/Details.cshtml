@@ -1,0 +1,24 @@
+﻿@model POOI_EF_SalgadoAmarillo.Models.Consumidor
+@{
+    ViewBag.Title = "Detalles del consumidor";
+}
+
+<h2>Detalles del consumidor</h2>
+<p>@ViewBag.Mensaje</p>
+@if (Model != null)
+{
+    <dl>
+        <dt>@Html.DisplayNameFor(m => m.dnicont)</dt>
+        <dd>@Html.DisplayFor(m => m.dnicont)</dd>
+        <dt>@Html.DisplayNameFor(m => m.nomcont)</dt>
+        <dd>@Html.DisplayFor(m => m.nomcont)</dd>
+        <dt>@Html.DisplayNameFor(m => m.apecont)</dt>
+        <dd>@Html.DisplayFor(m => m.apecont)</dd>
+        <dt>@Html.DisplayNameFor(m => m.emailcont)</dt>
+        <dd>@Html.DisplayFor(m => m.emailcont)</dd>
+        <dt>@Html.DisplayNameFor(m => m.idpais)</dt>
+        <dd>@Html.DisplayFor(m => m.idpais)</dd>
+    </dl>
+    <p>@Html.ActionLink("Actualizar", "Update", new { dni = Model.dnicont })</p>
+}
+<p>@Html.ActionLink("Volver al listado", "Index")</p>
